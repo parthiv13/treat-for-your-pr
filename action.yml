@@ -1,24 +1,17 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'A treat for your PR'
+description: 'Post a pic/gif on every PR as a treat for pushing the code'
+author: 'Parthiv Kativarapu'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: 'heart'
+  icon: 'bleh'
   color: 'red'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  GITHUB_TOKEN: #Github token
+    description: 'Github token for the repository.'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
-
-runs:
-  using: node20
-  main: dist/index.js
+  runs:
+    using: 'node12'
+    main: 'dist/index.js'
